@@ -34,8 +34,7 @@ function loadData() {
             cells[1].value = matchInfo.team1GoalsScored;
             cells[2].value = matchInfo.team1GoalsConceded;
             cells[3].value = matchInfo.team2Points;
-            cells[4].value = matchInfo.team2GoalsSc;
-                        cells[4].value = matchInfo.team2GoalsScored;
+            cells[4].value = matchInfo.team2GoalsScored;
             cells[5].value = matchInfo.team2GoalsConceded;
         });
     }
@@ -54,8 +53,9 @@ function updateRanking() {
     // محاسبه امتیازات و گل‌ها
     rows.forEach(row => {
         const cells = row.querySelectorAll('td input');
-        const team1 = row.cells[0].innerText.split(' vs ')[0];
-        const team2 = row.cells[0].innerText.split(' vs ')[1];
+        const teams = row.cells[0].innerText.split(' vs ');
+        const team1 = teams[0];
+        const team2 = teams[1];
 
         const team1Points = parseInt(cells[0].value) || 0;
         const team1GoalsScored = parseInt(cells[1].value) || 0;
@@ -79,7 +79,6 @@ function updateRanking() {
     for (const player in players) {
         players[player].goalDifference = players[player].goalsScored - players[player].goalsConceded;
     }
-
     // به‌روزرسانی جدول رتبه‌بندی
     for (const player in players) {
         document.getElementById(`points-${player.toLowerCase()}`).innerText = players[player].points;
