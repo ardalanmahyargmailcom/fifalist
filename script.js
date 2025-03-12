@@ -80,14 +80,26 @@ function updateRanking() {
         players[player].goalDifference = players[player].goalsScored - players[player].goalsConceded;
     }
 
-    // به‌روزرسانی جدول رتبه‌بندی
-    // به‌روزرسانی جدول رتبه‌بندی
-    for (const player in players) {
-        document.getElementById(`points-${player.toLowerCase()}`).innerText = players[player].points;
-        document.getElementById(`goals-scored-${player.toLowerCase()}`).innerText = players[player].goalsScored;
-        document.getElementById(`goals-conceded-${player.toLowerCase()}`).innerText = players[player].goalsConceded;
-        document.getElementById(`goal-difference-${player.toLowerCase()}`).innerText = players[player].goalDifference;
-    }
+    // رتبه‌بندی بر اساس امتیازات
+    const rankingArray = Object.keys(players).map(player => ({
+        name: player,
+        ...players[player]
+    }));
+
+    rankingArray.sort((a, b) => {
+        if (b.points !== a.points) {
+            return b.points - a.points; // امتیاز بیشتر در اولویت است
+        }
+        return (b.goalsScored - b.goalsConceded) - (a.goalsScored - a.goalsConceded); // اختلاف گل
+    });
+
+    // به‌روزرسانی جدول با رتبه‌بندی
+    rankingArray.forEach((player, index) => {
+        const rankCell = document.querySelector(`#matchTable .rank:nth-child(${index + 1})`);
+        if (rankCell) {
+            rankCell.innerText = index + 1; // رتبه
+        }
+    });
 }
 
 // بارگذاری داده‌ها هنگام بارگذاری صفحه
