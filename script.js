@@ -79,6 +79,7 @@ function updateRanking() {
     for (const player in players) {
         players[player].goalDifference = players[player].goalsScored - players[player].goalsConceded;
     }
+
     // به‌روزرسانی جدول رتبه‌بندی
     for (const player in players) {
         document.getElementById(`points-${player.toLowerCase()}`).innerText = players[player].points;
