@@ -1,38 +1,40 @@
 function saveData() {
-    const rows = document.querySelectorAll('#teamTable tr');
-    const teamData = [];
+    const rows = document.querySelectorAll('#matchTable tr');
+    const matchData = [];
 
     rows.forEach(row => {
         const cells = row.querySelectorAll('td input');
-        const teamInfo = {
-            name: row.cells[0].innerText,
-            points: cells[0].value,
-            goalsScored: cells[1].value,
-            goalsConceded: cells[2].value,
-            wins: cells[3].value,
-            losses: cells[4].value
+        const matchInfo = {
+            match: row.cells[0].innerText,
+            team1Points: cells[0].value,
+            team1GoalsScored: cells[1].value,
+            team1GoalsConceded: cells[2].value,
+            team2Points: cells[3].value,
+            team2GoalsScored: cells[4].value,
+            team2GoalsConceded: cells[5].value
         };
-        teamData.push(teamInfo);
+        matchData.push(matchInfo);
     });
 
     // ذخیره داده‌ها در Local Storage
-    localStorage.setItem('teamData', JSON.stringify(teamData));
+    localStorage.setItem('matchData', JSON.stringify(matchData));
     alert('اطلاعات ذخیره شد!');
 }
 
 function loadData() {
-    const storedData = localStorage.getItem('teamData');
+    const storedData = localStorage.getItem('matchData');
     if (storedData) {
-        const teamData = JSON.parse(storedData);
-        const rows = document.querySelectorAll('#teamTable tr');
+        const matchData = JSON.parse(storedData);
+        const rows = document.querySelectorAll('#matchTable tr');
 
-        teamData.forEach((teamInfo, index) => {
+        matchData.forEach((matchInfo, index) => {
             const cells = rows[index].querySelectorAll('td input');
-            cells[0].value = teamInfo.points;
-            cells[1].value = teamInfo.goalsScored;
-            cells[2].value = teamInfo.goalsConceded;
-            cells[3].value = teamInfo.wins;
-            cells[4].value = teamInfo.losses;
+            cells[0].value = matchInfo.team1Points;
+            cells[1].value = matchInfo.team1GoalsScored;
+            cells[2].value = matchInfo.team1GoalsConceded;
+            cells[3].value = matchInfo.team2Points;
+            cells[4].value = matchInfo.team2GoalsScored;
+            cells[5].value = matchInfo.team2GoalsConceded;
         });
     }
 }
