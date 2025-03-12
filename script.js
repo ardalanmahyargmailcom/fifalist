@@ -18,7 +18,7 @@ function saveData() {
 
     // ذخیره داده‌ها در Local Storage
     localStorage.setItem('matchData', JSON.stringify(matchData));
-    alert('اطلاعات ذخیره شد!');
+    alert('اطلاعات بازی‌ها ذخیره شد!');
 }
 
 function loadData() {
