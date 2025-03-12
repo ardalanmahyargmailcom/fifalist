@@ -4,6 +4,7 @@ body {
     background: linear-gradient(135deg, #1e1e2f, #3a3a5a);
     margin: 0;
     padding: 20px;
+        color: #fff;
 }
 
 .container {
@@ -13,13 +14,17 @@ body {
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(10px);
 }
 
 h1 {
     text-align: center;
     color: #ffcc00;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+h2 {
+    margin-top: 40px;
+    text-align: center;
+    color: #ffcc00;
 }
 
 table {
@@ -40,13 +45,11 @@ th, td {
 th {
     background-color: #ffcc00;
     color: #333;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.    5);
 }
 
 td {
     background-color: rgba(255, 255, 255, 0.2);
     color: #fff;
-    border-radius: 5px;
 }
 
 td input {
