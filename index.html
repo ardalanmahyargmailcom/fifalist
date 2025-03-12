@@ -14,16 +14,26 @@
             <thead>
                 <tr>
                     <th>بازی</th>
-                    <th>امتیازات <span id="team1-name"></span></th>
-                    <th>گل‌های زده <span id="team1-name"></span></th>
-                    <th>گل‌های خورده <span id="team1-name"></span></th>
-                    <th>امتیازات <span id="team2-name"></span></th>
-                    <th>گل‌های زده <span id="team2-name"></span></th>
-                    <th>گل‌های خورده <span id="team2-name"></span></th>
+                    <th>امتیازات نوید</th>
+                    <th>گل‌های زده نوید</th>
+                    <th>گل‌های خورده نوید</th>
+                    <th>امتیازات فرشید</th>
+                    <th>گل‌های زده فرشید</th>
+                    <th>گل‌های خورده فرشید</th>
                     <th>رتبه</th>
                 </tr>
             </thead>
             <tbody id="matchTable">
+                <tr>
+                    <td>نوید vs فرشید</td>
+                    <td><input type="number" value="0" /></td>
+                    <td><input type="number" value="0" /></td>
+                    <td><input type="number" value="0" /></td>
+                    <td><input type="number" value="0" /></td>
+                    <td><input type="number" value="0" /></td>
+                    <td><input type="number" value="0" /></td>
+                    <td class="rank"></td>
+                </tr>
                 <tr>
                     <td>نوید vs رامیار</td>
                     <td><input type="number" value="0" /></td>
@@ -36,16 +46,6 @@
                 </tr>
                 <tr>
                     <td>نوید vs مهیار</td>
-                    <td><input type="number" value="0" /></td>
-                    <td><input type="number" value="0" /></td>
-                    <td><input type="number" value="0" /></td>
-                    <td><input type="number" value="0" /></td>
-                    <td><input type="number" value="0" /></td>
-                    <td><input type="number" value="0" /></td>
-                    <td class="rank"></td>
-                </tr>
-                <tr>
-                    <td>نوید vs فرشید</td>
                     <td><input type="number" value="0" /></td>
                     <td><input type="number" value="0" /></td>
                     <td><input type="number" value="0" /></td>
@@ -72,7 +72,7 @@
                     <td><input type="number" value="0" /></td>
                     <td><input type="number" value="0" /></td>
                     <td><input type="number" value="0" /></td>
-                    <                    <td class="rank"></td>
+                    <td class="rank"></td>
                 </tr>
                 <tr>
                     <td>مهیار vs فرشید</td>
@@ -86,7 +86,7 @@
                 </tr>
             </tbody>
         </table>
-        <button onclick="saveData()">ذخیره اطلاعات</button>
+        <button onclick="saveData()">ذخیره اطلاعات</        <button onclick="saveData()">ذخیره اطلاعات</button>
 
         <h2>تیم‌ها و کشورها</h2>
         <table>
