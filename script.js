@@ -12,7 +12,7 @@ function saveData() {
             team2Points: parseInt(cells[3].value) || 0,
             team2GoalsScored: parseInt(cells[4].value) || 0,
             team2GoalsConceded: parseInt(cells[5].value) || 0
-        };
+               };
         matchData.push(matchInfo);
     });
 
