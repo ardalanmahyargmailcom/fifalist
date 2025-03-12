@@ -10,50 +10,6 @@
     <div class="container">
         <h1>مدیریت امتیازات تیم‌ها</h1>
 
-        <!-- جدول رتبه‌بندی -->
-        <h2>رتبه‌بندی بازیکنان</h2>
-        <table id="rankingTable">
-            <thead>
-                <tr>
-                    <th>نام بازیکن</th>
-                    <th>امتیازات</th>
-                    <th>گل‌های زده</th>
-                    <th>گل‌های خورده</th>
-                    <th>اختلاف گل</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>نوید</td>
-                    <td id="points-noid">0</td>
-                    <td id="goals-scored-noid">0</td>
-                    <td id="goals-conceded-noid">0</td>
-                    <td id="goal-difference-noid">0</td>
-                </tr>
-                <tr>
-                    <td>مهیار</td>
-                    <td id="points-mahyar">0</td>
-                    <td id="goals-scored-mahyar">0</td>
-                    <td id="goals-conceded-mahyar">0</td>
-                    <td id="goal-difference-mahyar">0</td>
-                </tr>
-                <tr>
-                    <td>رامیار</td>
-                    <td id="points-ramyar">0</td>
-                    <td id="goals-scored-ramyar">0</td>
-                    <td id="goals-conceded-ramyar">0</td>
-                    <td id="goal-difference-ramyar">0</td>
-                </tr>
-                <tr>
-                    <td>فرشید</td>
-                    <td id="points-farshid">0</td>
-                    <td id="goals-scored-farshid">0</td>
-                    <td id="goals-conceded-farshid">0</td>
-                    <td id="goal-difference-farshid">0</td>
-                </tr>
-            </tbody>
-        </table>
-
         <table>
             <thead>
                 <tr>
@@ -64,6 +20,7 @@
                     <th>امتیازات <span id="team2-name"></span></th>
                     <th>گل‌های زده <span id="team2-name"></span></th>
                     <th>گل‌های خورده <span id="team2-name"></span></th>
+                    <th>رتبه</th>
                 </tr>
             </thead>
             <tbody id="matchTable">
@@ -75,6 +32,7 @@
                     <td><input type="number" value="0" /></td>
                     <td><input type="number" value="0" /></td>
                     <td><input type="number" value="0" /></td>
+                    <td class="rank"></td>
                 </tr>
                 <tr>
                     <td>نوید vs مهیار</td>
@@ -83,7 +41,8 @@
                     <td><input type="number" value="0" /></td>
                     <td><input type="number" value="0" /></td>
                     <td><input type="number" value="0" /></td>
-                                        <td><input type="number" value="0" /></td>
+                    <td><input type="number" value="0" /></td>
+                    <td class="rank"></td>
                 </tr>
                 <tr>
                     <td>نوید vs فرشید</td>
@@ -93,6 +52,7 @@
                     <td><input type="number" value="0" /></td>
                     <td><input type="number" value="0" /></td>
                     <td><input type="number" value="0" /></td>
+                    <td class="rank"></td>
                 </tr>
                 <tr>
                     <td>رامیار vs مهیار</td>
@@ -102,6 +62,7 @@
                     <td><input type="number" value="0" /></td>
                     <td><input type="number" value="0" /></td>
                     <td><input type="number" value="0" /></td>
+                    <td class="rank"></td>
                 </tr>
                 <tr>
                     <td>رامیار vs فرشید</td>
@@ -111,6 +72,7 @@
                     <td><input type="number" value="0" /></td>
                     <td><input type="number" value="0" /></td>
                     <td><input type="number" value="0" /></td>
+                    <                    <td class="rank"></td>
                 </tr>
                 <tr>
                     <td>مهیار vs فرشید</td>
@@ -120,6 +82,7 @@
                     <td><input type="number" value="0" /></td>
                     <td><input type="number" value="0" /></td>
                     <td><input type="number" value="0" /></td>
+                    <td class="rank"></td>
                 </tr>
             </tbody>
         </table>
